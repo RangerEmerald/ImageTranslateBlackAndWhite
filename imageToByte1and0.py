@@ -44,7 +44,7 @@ else:
 
         for arr in new_img:
             for num in arr:
-                if num > 0.1:
+                if num > 0.75:
                     string += "0"
                 else:
                     string += "1"
