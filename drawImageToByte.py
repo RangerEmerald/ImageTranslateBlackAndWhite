@@ -42,6 +42,10 @@ else:
         if imageName:
             if not imageName.endswith(".jpg") and not imageName.endswith(".png"):
                 raise ValueError("To save file name does not end with .jpg or .png")
+            elif imageName.endswith(".jpg"):
+                shouldContinue = input("Do you want to use JPG or PNG? PNG could decrease the file size. (PNG/JPG): ")
+                if shouldContinue.lower() == "PNG":
+                    imageName = imageName.replace(".jpg", ".png")
                 
             image.save(imageName)
 
