@@ -19,7 +19,7 @@ try:
     if len(sys.argv) >= 4:
         debug = sys.argv[3]
 
-    fd, path = tempfile.mkstemp(suffix='.jpg')
+    fd, path = tempfile.mkstemp(suffix='.png')
 
     image_file = Image.open(sys.argv[1])
     image_file = image_file.convert('1')
